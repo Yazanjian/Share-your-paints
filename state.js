@@ -78,7 +78,7 @@ const PageState = function (){
 //login page
 const loginPage = function(){
     document.querySelector("#loginContainer").innerHTML = `
-    <form class="loginForm" onSubmit="goToTheSecondPage()">
+    <form class="loginForm" onSubmit="goToTheSecondPage(event)">
         <div class="login">
             <label for="name">Enter your name</label>
             <input type="text" id="name" placeholder="Enter your name">
@@ -248,7 +248,10 @@ function getMousePos(canvas, evt) {
 
 //to get the value of input element and use it in the home page
 // put it here to send the canvas after the init
-function goToTheSecondPage(){
+function goToTheSecondPage(e){
+    e.preventDefault();
+        // console.log(e)
+
     //name is defined at the top of the file because we need it to compare the name with users names
     name = document.getElementById("name").value;
     if(name){
