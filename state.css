@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* first page styles  */
+.loginContainer{
+    margin-top: 20%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: solid #F96167;
+    background-color: #FCE77D;
+    padding: 20px;
+}
+.loginForm label {
+    margin-bottom: 10px;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.loginForm button{
+    border-radius: 7px;
+    width: 70%;
+    background-color: #F96167;
+    color: white;
+    padding:10px;
+}
+
+
+
+/* second page styles : */
+.canvasContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10%;
+}
+.canvasAndUsers{
+    display: grid;
+    width: 80%;
+    grid-template-columns:70% 30%;
+    grid-template-rows: 100% 30px;
+    grid-template-areas: "canvas users" "colorPicker _";
+    grid-gap: 5px;
+}
+.titleBar{
+    background-color: #F96167;
+    color: #FCE77D;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10%;
+}
+.myCanvas{
+   /* width:90%; */
+    border: solid #F96167;
+    grid-area: canvas;
+}
+.colorpicker{
+    /* width: 60%; */
+    flex-wrap: nowrap;
+    grid-area: colorPicker;
+}
+.color{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    margin-bottom: 0px;
+    float: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    border:1px solid white;
+}
+.users{
+    background-color: beige;
+    grid-area: users;
+}
+.users h4 {
+    text-align: center;
+}
+
+@media(max-width:650px){
+    .canvasAndUsers{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        /* grid-template-columns:100%; */
+    }
+    
+}
