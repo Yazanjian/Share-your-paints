@@ -250,7 +250,7 @@ function getMousePos(canvas, evt) {
 // put it here to send the canvas after the init
 function goToTheSecondPage(e){
     e.preventDefault();
-        // console.log(e)
+        console.log(e)
 
     //name is defined at the top of the file because we need it to compare the name with users names
     name = document.getElementById("name").value;
