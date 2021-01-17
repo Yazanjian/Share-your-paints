@@ -3,7 +3,7 @@ var usersNamesList = new Array();
 var name;
 socketInit = (userName,canvas) => {
     // Create WebSocket connection.
-    socket = new WebSocket('ws://t2k.azurewebsites.net/painter.ashx?appid=Exalt');
+    socket = new WebSocket('yourWebSocket');
     // Connection opened
     let initObj = { 
         isNew:true,
